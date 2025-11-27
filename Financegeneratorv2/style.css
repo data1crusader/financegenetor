@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0d1b2a; /* Dark blue background */
+  color: #e0e0e0; /* Light text */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.page {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  background: #1b263b; /* Darker card background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+}
+
+.page.active {
+  display: block;
+}
+
+input, button, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #3a4a6b;
+  background-color: #1b263b;
+  color: #e0e0e0;
+}
+
+input::placeholder {
+  color: #a0a0a0;
+}
+
+button {
+  background-color: #3a6073; /* Teal blue button */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1f4f5f;
+}
+
+select {
+  background-color: #1b263b;
+  color: #e0e0e0;
+  border: 1px solid #3a4a6b;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.summary p, .expense-entry h3, .expense-list h3, .history h3 {
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 8px;
+  background: #293753;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e0e0e0;
+}
+
+li button {
+  width: auto;
+  padding: 4px 8px;
+  margin-left: 5px;
+  font-size: 12px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+li button.editBtn {
+  background-color: #f1c40f;
+}
+
+canvas {
+  margin: 20px 0;
+  background-color: #1b263b; /* Chart background matches card */
+  border-radius: 8px;
+}

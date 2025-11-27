@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="page active">
+    <h1>Finance Generator</h1>
+    <p>Keep your Finance in check.</p>
+    <input type="text" id="username" placeholder="Username">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="loginBtn">Login / Register</button>
+  </div>
+
+  <!-- ALLOWANCE PAGE -->
+  <div id="allowancePage" class="page">
+    <h2>Enter Your Monthly Allowance</h2>
+    <input type="number" id="monthlyAllowance" placeholder="Enter allowance">
+    <button id="saveAllowanceBtn">Save Allowance</button>
+  </div>
+
+  <!-- DASHBOARD PAGE -->
+  <div id="dashboardPage" class="page">
+    <header>
+      <h1>Finance Generator</h1>
+      <p>Keep your Finance in check.</p>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <div class="summary">
+      <p>Currency: 
+        <select id="currencySelect">
+          <option value="$">$ - USD</option>
+          <option value="€">€ - EUR</option>
+          <option value="₹">₹ - INR</option>
+          <option value="£">£ - GBP</option>
+          <option value="¥">¥ - JPY</option>
+        </select>
+      </p>
+
+      <p>Monthly Allowance: <span id="displayAllowance">0</span></p>
+      <button id="editAllowanceBtn">Edit Allowance</button>
+      <p>Total Spent: <span id="totalSpent">0</span></p>
+      <p>Remaining Balance: <span id="remainingBalance">0</span></p>
+      <button id="resetExpensesBtn">Reset Expenditure</button>
+    </div>
+
+    <div class="expense-entry">
+      <h3>Add / Edit Daily Expense</h3>
+      <input type="date" id="expenseDate">
+      <input type="text" id="expenseDesc" placeholder="Description">
+      <input type="number" id="expenseAmount" placeholder="Amount">
+      <button id="addExpenseBtn">Add Expense</button>
+      <button id="updateExpenseBtn" style="display:none;">Update Expense</button>
+    </div>
+
+    <canvas id="expenseChart" height="200"></canvas>
+
+    <div class="expense-list">
+      <h3>Daily Expenses</h3>
+      <ul id="expenseList"></ul>
+    </div>
+
+    <div class="history">
+      <h3>Previous Months</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+S
